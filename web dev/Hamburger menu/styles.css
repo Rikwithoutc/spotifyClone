@@ -1,0 +1,70 @@
+nav {
+    position: relative;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 30px;
+    height: 24px;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.menu-icon .bar {
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #f4f4f4;
+}
+
+.menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+}
+
+.menu li a:hover {
+    background-color: #ddd;
+}
+
+/* Transform the hamburger icon into an 'X' when checked */
+#menu-toggle:checked + label .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+}
+
+#menu-toggle:checked + label .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + label .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Show the menu when the checkbox is checked */
+#menu-toggle:checked ~ .menu {
+    display: block;
+}
