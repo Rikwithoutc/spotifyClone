@@ -16,7 +16,7 @@ function secondsToMinutesSeconds(seconds){
 
 async function getSongs() {
     try {
-        let response = await fetch('https://api.github.com/repos/Rikwithoutc/spotifyClone/contents/allSongs');
+        let response = await fetch('https://api.github.com/repos/Rikwithoutc/spotifyClone/contents/songs');
         let data = await response.json();
         return data; // This is now properly returned
     } catch (error) {
